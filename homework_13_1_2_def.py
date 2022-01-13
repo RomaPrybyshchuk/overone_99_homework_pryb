@@ -1,15 +1,19 @@
 # ----------TASK 13_1---VARIANT 1-----
 #
+
+# def summa_every_number(lst):
+#     ls = []
+#     for nmb in lst:
+#         summa = 0
+#         while nmb != 0:
+#             nmb, smm = divmod(nmb, 10)
+#             summa += smm
+#         ls.append(summa)
+#     return ls
 #
-# def summa_every_number(nmb):
-#     summa = 0
-#     while nmb != 0:
-#         nmb, smm = divmod(nmb, 10)
-#         summa += smm
-#     return summa
 #
-#
-# print(sorted([summa_every_number(int(i)) for i in input('Enter numbers: ').split()]))
+# lst_13_1 = [int(i) for i in input('enter numbers: ').split()]
+# print(sorted(summa_every_number(lst_13_1)))
 
 
 # ----------TASK 13_1---VARIANT 2(with function map)-----
@@ -27,22 +31,12 @@
 
 #
 # def get_fx(nmb):
-#
-#     def less_minus2(number):
-#         return 1 - (number + 2) ** 2
-#
-#     def between(number):
-#         return - number / 2
-#
-#     def more_2(number):
-#         return (number - 2) ** 2 + 1
-#
 #     if nmb <= -2:
-#         return less_minus2(nmb)
+#         return 1 - (nmb + 2) ** 2
 #     elif -2 < nmb <= 2:
-#         return between(nmb)
+#         return - nmb / 2
 #     elif nmb > 2:
-#         return more_2(nmb)
+#         return (nmb - 2) ** 2 + 1
 #
 #
 # print(get_fx(int(input('Enter number: '))))
@@ -51,11 +45,16 @@
 # ----------TASK 13_3----------
 #
 #
-# def division_on_two(i):
-#     return i / 2
+# def division_on_two(lst):
+#     ls = []
+#     for i in lst:
+#         if int(i) % 2 == 0:
+#             ls.append(i/2)
+#     return ls
 #
 #
-# print([division_on_two(int(i)) for i in input('enter numbers: ').split() if int(i) % 2 == 0])
+# lst_13_3 = [int(i) for i in input('enter numbers: ').split()]
+# print(division_on_two(lst_13_3))
 
 
 # ----------TASK 13_4----------
